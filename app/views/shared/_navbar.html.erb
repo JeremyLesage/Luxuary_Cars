@@ -1,28 +1,56 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><%= image_tag 'Luxuary.png', class: "navbar-brand"%></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <a class="nav-link" href="qui_sommes_nous">Qui Sommes Nous 📱</a>
+      </li>
+      <li>
+        <a class="nav-link" href="acheter_une_voiture">Acheter une voiture 🏎</a>
+      </li>
+      <li>
+        <a class="nav-link" href="louer_une_voiture">Louer une voiture 🚗</a>
+      </li>
+       <li>
+        <a class="nav-link" href="vendre_une_voiture">vendre une voiture 🚙</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Nos Modèles 🛠
+        </a>
+        <div class="dropdown-menu drop-center" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item drop-center" href="#">Ferrari <%= image_tag 'logo/ferrari.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">Lamborghini <%= image_tag 'logo/lamborghini.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">Mercedes <%= image_tag 'logo/mercedes.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">Porshe <%= image_tag 'logo/porsche.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">Audi <%= image_tag 'logo/audi.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">Maserati <%= image_tag 'logo/maserati.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">Bugati <%= image_tag 'logo/bugatti.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="#">BMW <%= image_tag 'logo/bmw.png', class: "logo-dropdown" %></a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="navbar-right">
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Mon Panier 🛒", "#", class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+        <li class="nav-item active">
+          <%= link_to "Messagerie ✉️", "#", class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown drop-center">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to "Mon compte", "#", class: "dropdown-item" %>
+            <%= link_to "Mes informations", "#", class: "dropdown-item" %>
+            <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
@@ -32,4 +60,7 @@
       <% end %>
     </ul>
   </div>
-</div>
+  </div>
+  </div>
+</nav>
+
