@@ -16,15 +16,15 @@
         <a class="nav-link" href="louer_une_voiture">Louer une voiture 🚗</a>
       </li>
        <li>
-        <a class="nav-link" href="vendre_une_voiture">vendre une voiture 🚙</a>
+        <a class="nav-link" href="vendre_une_voiture">Vendre une voiture 🚙</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Nos Modèles 🛠
         </a>
         <div class="dropdown-menu drop-center" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item drop-center" href="#">Ferrari <%= image_tag 'logo/ferrari.png', class: "logo-dropdown" %></a>
-          <a class="dropdown-item drop-center" href="#">Lamborghini <%= image_tag 'logo/lamborghini.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="ferrari">Ferrari <%= image_tag 'logo/ferrari.png', class: "logo-dropdown" %></a>
+          <a class="dropdown-item drop-center" href="lamborghini">Lamborghini <%= image_tag 'logo/lamborghini.png', class: "logo-dropdown" %></a>
           <a class="dropdown-item drop-center" href="#">Mercedes <%= image_tag 'logo/mercedes.png', class: "logo-dropdown" %></a>
           <a class="dropdown-item drop-center" href="#">Porshe <%= image_tag 'logo/porsche.png', class: "logo-dropdown" %></a>
           <a class="dropdown-item drop-center" href="#">Audi <%= image_tag 'logo/audi.png', class: "logo-dropdown" %></a>
@@ -40,7 +40,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Mon Panier 🛒", "#", class: "nav-link" %>
+          <%= link_to "Mon Panier 🛒", "mon_panier", class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Messagerie ✉️", "#", class: "nav-link" %>

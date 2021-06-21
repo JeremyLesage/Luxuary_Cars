@@ -16,4 +16,13 @@ class PagesController < ApplicationController
   def vendre_une_voiture
   end
 
+  def ferrari
+  end
+
+  def mon_panier
+  end
+
+  def lamborghini
+  end
+
 end

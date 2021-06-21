@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom voiture:</strong>
+  <%= @locations_achat.nom_voiture %>
+</p>
+
+<p>
+  <strong>Vitesse max:</strong>
+  <%= @locations_achat.vitesse_max %>
+</p>
+
+<p>
+  <strong>Acceleration:</strong>
+  <%= @locations_achat.acceleration %>
+</p>
+
+<p>
+  <strong>Puissance:</strong>
+  <%= @locations_achat.puissance %>
+</p>
+
+<p>
+  <strong>Prix:</strong>
+  <%= @locations_achat.prix %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @locations_achat.photo %>
+</p>
+
+<%= link_to 'Edit', edit_locations_achat_path(@locations_achat) %> |
+<%= link_to 'Back', locations_achats_path %>

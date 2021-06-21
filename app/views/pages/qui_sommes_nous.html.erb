@@ -1,0 +1,156 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1253049/pexels-photo-1253049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Luxuary_Cars !</h1>
+    <p>Notre équipe à votre écoute, pour votre plus grand bonheur !</p>
+    <a class="btn btn-flat color" href="users/sign_in">Rejoingnez nous</a>
+  </div>
+</div>
+
+<br>
+
+<!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2 class="text-center">Notre équipe</h2>
+          <p class="text-center">Et voilà notre équipe d'experts pretent à faire de votre rêve une réalitée. Nul doute que vous resortirais de nos locaux avec le sourire et votre nouveau bolide !</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up">
+              <%= image_tag 'team/team-1.png', class:"img-fluid", alt:"" %>
+              <div class="member-info">
+                <h4 class="text-center">Sylvia Morena</h4>
+                <p class="text-center"><span>Fondatrice</span></p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="150">
+              <%= image_tag 'team/team-2.png', class:"img-fluid", alt:"" %>
+              <div class="member-info">
+                <h4 class="text-center">Sarah Jhonson</h4>
+                <p class="text-center"><span>Chef de projet</span></p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+               <%= image_tag 'team/team-3.png', class:"img-fluid", alt:"" %>
+              <div class="member-info">
+                <h4 class="text-center">William Anderson</h4>
+                <p class="text-center"><span>Mécanicien</span></p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <br>
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2 class="text-center">Contact</h2>
+          <p class="text-center">Pour toute questions ou demande de devis. Merci de nous contacter aux coordonnées ci dessous ! 🏎</p>
+        </div>
+
+        <br>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Notre Adresse</h3>
+              <p>33 Rue de la Cathédrale, 80000 Amiens</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email</h3>
+              <p>lesage1510@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Appelez nous</h3>
+              <p>0786891660</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 ">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1623923929118!6m8!1m7!1sOgl15krgQH67CHQq8pATKw!2m2!1d49.89517335086434!2d2.301161361664988!3f160.0647291982388!4f27.49325936130586!5f0.7820865974627469" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Monique" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Moniquedu49@gmail.com" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+              <br>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
