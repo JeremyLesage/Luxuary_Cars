@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="col-md-8">
 
 <%= simple_form_for(@locations_achat) do |f| %>
   <%= f.error_notification %>
@@ -9,10 +11,16 @@
     <%= f.input :acceleration %>
     <%= f.input :puissance %>
     <%= f.input :prix %>
-    <%= f.input :photo %>
+
+
+    <%= f.input :photo, label: "Une photo de la voiture", inline_label: true, hint: "La photo est obligatoire et doit être au format jpeg, png, gif ou bmp :)", wrapper_html: { class: 'postuler-input teko-font' } %>
+
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+</div>
+</div>

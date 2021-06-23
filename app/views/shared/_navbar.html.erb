@@ -33,6 +33,11 @@
           <a class="dropdown-item drop-center" href="#">BMW <%= image_tag 'logo/bmw.png', class: "logo-dropdown" %></a>
         </div>
       </li>
+       <% if user_signed_in? && current_user.role === 'admin' %>
+      <li>
+        <a class="nav-link" href="locations_achats">Gestion des Voitures 👨🏻‍💼</a>
+      </li>
+      <% end %>
     </ul>
 
     <div class="navbar-right">

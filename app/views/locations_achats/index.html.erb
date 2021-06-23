@@ -1,37 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 
-<h1>Locations Achats</h1>
+      <h1 class="text-center">Gestion Voitures Locations/Achats</h1>
+      <br>
+      <div class='btn btn-flat'>
+        <%= link_to new_locations_achat_path do %>
+        Ajouter un véhicule
+        <% end %>
+      </div>
+       <ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nom voiture</th>
-      <th>Vitesse max</th>
-      <th>Acceleration</th>
-      <th>Puissance</th>
-      <th>Prix</th>
-      <th>Photo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @locations_achats.each do |locations_achat| %>
-      <tr>
-        <td><%= locations_achat.nom_voiture %></td>
-        <td><%= locations_achat.vitesse_max %></td>
-        <td><%= locations_achat.acceleration %></td>
-        <td><%= locations_achat.puissance %></td>
-        <td><%= locations_achat.prix %></td>
-        <td><%= locations_achat.photo %></td>
-        <td><%= link_to 'Show', locations_achat %></td>
-        <td><%= link_to 'Edit', edit_locations_achat_path(locations_achat) %></td>
-        <td><%= link_to 'Destroy', locations_achat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <% @locations_achats.each do |locations_achat| %>
 
-<br>
+            <div class="card" style="width: 18rem;">
+              <%= cl_image_tag locations_achat.photo, :width => 285, :crop => "pad" %>
+              <div class="card-body">
 
-<%= link_to 'New Locations Achat', new_locations_achat_path %>
+                <p><strong>Modèle voiture: </strong><%= locations_achat.nom_voiture%></p>
+
+                <p><strong>Vitesse Maximum: </strong><%= locations_achat.vitesse_max%></p>
+
+                <p><strong>Acceleration: </strong><%= locations_achat.acceleration%></p>
+
+                <p><strong>Puissance du véhicule: </strong><%= locations_achat.puissance%></p>
+
+                <p><strong>Prix du véhicule: </strong><%= locations_achat.prix%></p>
+              </div>
+              <div class="notification-actions text-center">
+                <%= link_to edit_locations_achat_path(locations_achat) do %>
+                Editer <i class="fas fa-pencil-alt"></i>
+                <% end %>
+                <%= link_to locations_achat_path(locations_achat), method: :delete, data: {confirm: 'Êtes vous sûrs de vouloir supprimer ?' } do %>
+                Supprimer <i class="far fa-trash-alt"></i>
+                <% end %>
+              </div>
+          </div>
+          <% end %>
+        </ul>
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>

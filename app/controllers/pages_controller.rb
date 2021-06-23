@@ -25,4 +25,7 @@ class PagesController < ApplicationController
   def lamborghini
   end
 
+  def gestion_voiture
+  end
+
 end

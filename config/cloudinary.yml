@@ -1,0 +1,18 @@
+development:
+  cloud_name: luxuary-cars
+  api_key: '871538726467912'
+  api_secret: 4Y3Wn_lFz3AvOJYaMviE5Rrpg4M
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: luxuary-cars
+  api_key: '871538726467912'
+  api_secret: 4Y3Wn_lFz3AvOJYaMviE5Rrpg4M
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: luxuary-cars
+  api_key: '871538726467912'
+  api_secret: 4Y3Wn_lFz3AvOJYaMviE5Rrpg4M
+  enhance_image_tag: true
+  static_file_support: false

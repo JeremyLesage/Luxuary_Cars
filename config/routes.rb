@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/ferrari', to: 'pages#ferrari'
   get '/mon_panier', to: 'pages#mon_panier'
   get '/lamborghini', to: 'pages#lamborghini'
+  get '/gestion_voiture', to: 'pages#gestion_voiture'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
