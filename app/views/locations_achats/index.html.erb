@@ -1,16 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Gestion des voitures Locations/Achats</h1>
+     <div class='btn btn-flat'>
+        <%= link_to new_locations_achat_path do %>
+        +🏎
+        <% end %>
+      </div>
+
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm">
-
-      <h1 class="text-center">Gestion Voitures Locations/Achats</h1>
       <br>
-      <div class='btn btn-flat'>
-        <%= link_to new_locations_achat_path do %>
-        Ajouter un véhicule
-        <% end %>
-      </div>
-       <ul>
-
+       <ul class="grid2">
 
           <% @locations_achats.each do |locations_achat| %>
 
@@ -28,6 +32,7 @@
 
                 <p><strong>Prix du véhicule: </strong><%= locations_achat.prix%></p>
               </div>
+              <hr>
               <div class="notification-actions text-center">
                 <%= link_to edit_locations_achat_path(locations_achat) do %>
                 Editer <i class="fas fa-pencil-alt"></i>
@@ -40,11 +45,7 @@
           <% end %>
         </ul>
     </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
   </div>
 </div>
+
+

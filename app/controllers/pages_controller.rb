@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def louer_une_voiture
+    @locations_achats = LocationsAchat.all
   end
 
   def vendre_une_voiture

@@ -1,36 +1,49 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Gestion des voitures Locations/Achats</h1>
+    </div>
+  </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 
-<p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nom voiture:</strong>
-  <%= @locations_achat.nom_voiture %>
-</p>
+      <div class="card-body text-center">
+        <p>
+          <strong>Nom voiture:</strong>
+          <%= @locations_achat.nom_voiture %>
+        </p>
 
-<p>
-  <strong>Vitesse max:</strong>
-  <%= @locations_achat.vitesse_max %>
-</p>
+        <p>
+          <strong>Vitesse max:</strong>
+          <%= @locations_achat.vitesse_max %>
+        </p>
 
-<p>
-  <strong>Acceleration:</strong>
-  <%= @locations_achat.acceleration %>
-</p>
+        <p>
+          <strong>Acceleration:</strong>
+          <%= @locations_achat.acceleration %>
+        </p>
 
-<p>
-  <strong>Puissance:</strong>
-  <%= @locations_achat.puissance %>
-</p>
+        <p>
+          <strong>Puissance:</strong>
+          <%= @locations_achat.puissance %>
+        </p>
 
-<p>
-  <strong>Prix:</strong>
-  <%= @locations_achat.prix %>
-</p>
+        <p>
+          <strong>Prix:</strong>
+          <%= @locations_achat.prix %>
+        </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @locations_achat.photo %>
-</p>
+        <p>
+          <%= cl_image_tag @locations_achat.photo, :width => 285, :crop => "pad" %>
+        </p>
 
-<%= link_to 'Edit', edit_locations_achat_path(@locations_achat) %> |
-<%= link_to 'Back', locations_achats_path %>
+        <%= link_to 'Editer', edit_locations_achat_path(@locations_achat) %> |
+        <%= link_to 'Retour Index', locations_achats_path %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

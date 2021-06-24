@@ -8,6 +8,7 @@ class LocationsAchatsController < ApplicationController
 
   # GET /locations_achats/1 or /locations_achats/1.json
   def show
+    @locations_achats = LocationsAchat.all
   end
 
   # GET /locations_achats/new
