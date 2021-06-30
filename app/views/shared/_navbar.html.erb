@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/"><%= image_tag 'Luxuary.png', class: "navbar-brand"%></a>
+<nav style="font-family: 'Roboto', sans-serif;" class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,20 +6,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li>
-        <a class="nav-link" href="qui_sommes_nous">Qui Sommes Nous 📱</a>
+        <a style="color: white;", class="nav-link" href="/">Home</a>
       </li>
       <li>
-        <a class="nav-link" href="acheter_une_voiture">Acheter une voiture 🏎</a>
+        <a style="color: white;", class="nav-link" href="qui_sommes_nous">Qui Sommes Nous</a>
       </li>
       <li>
-        <a class="nav-link" href="louer_une_voiture">Louer une voiture 🚗</a>
+        <a style="color: white;", class="nav-link" href="acheter_une_voiture">Acheter une voiture</a>
+      </li>
+      <li>
+        <a style="color: white;", class="nav-link" href="louer_une_voiture">Louer une voiture</a>
       </li>
        <li>
-        <a class="nav-link" href="vendre_une_voiture">Vendre une voiture 🚙</a>
+        <a style="color: white;", class="nav-link" href="vendre_une_voiture">Vendre une voiture</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Nos Modèles 🛠
+        <a style="color: white;", class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Nos Modèles
         </a>
         <div class="dropdown-menu drop-center" aria-labelledby="navbarDropdown">
           <a class="dropdown-item drop-center" href="ferrari">Ferrari <%= image_tag 'logo/ferrari.png', class: "logo-dropdown" %></a>
@@ -35,7 +37,10 @@
       </li>
        <% if user_signed_in? && current_user.role === 'admin' %>
       <li>
-        <a class="nav-link" href="locations_achats">Gestion des Voitures 👨🏻‍💼</a>
+        <a style="color: red" class="nav-link" href="locations_achats">Gestion des Voitures</a>
+      </li>
+      <li>
+        <a style="color: red" class="nav-link" href="catalog">Catalogue</a>
       </li>
       <% end %>
     </ul>
@@ -44,19 +49,28 @@
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Mon Panier 🛒", "mon_panier", class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Messagerie ✉️", "#", class: "nav-link" %>
-        </li>
         <li class="nav-item dropdown drop-center">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+          <%= image_tag "https://img2.freepng.fr/20180319/aeq/kisspng-computer-icons-google-account-user-profile-iconfin-png-icons-download-profile-5ab0301e0d78f3.2971990915214960940552.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Mon compte", "#", class: "dropdown-item" %>
+            <%= link_to "Mon compte", "mon_comptes", class: "dropdown-item" %>
             <%= link_to "Mes informations", "#", class: "dropdown-item" %>
+             <%= link_to "Mon panier", "carts", class: "dropdown-item" %>
+
             <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
+          <% end %>
+          <button style="background: transparent;
+    border: none; !important" onclick="myFunction()">🌗</button>
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+    <% if user_signed_in? %>
         </li>
       <% else %>
         <li class="nav-item">

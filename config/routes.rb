@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :products
+  resources :line_items
+  resources :carts
+  resources :mon_comptes
+  resources :items
   resources :locations_achats
   namespace :locations do
     resources :achats
@@ -13,5 +19,7 @@ Rails.application.routes.draw do
   get '/mon_panier', to: 'pages#mon_panier'
   get '/lamborghini', to: 'pages#lamborghini'
   get '/gestion_voiture', to: 'pages#gestion_voiture'
+  get '/mon_compte', to: 'pages#mon_compte'
+  get '/catalog', to: 'catalog#catalog'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

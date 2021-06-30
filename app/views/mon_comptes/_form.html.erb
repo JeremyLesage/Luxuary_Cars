@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm text-center">
+
+      <br><br>
+
+<%= simple_form_for(@mon_compte) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+
+    <%= f.label :h_f, class:"btn active" do %>
+    <%= f.radio_button :h_f, true %>
+    Homme
+    <% end %>
+
+    <%= f.label :h_f, class:"btn active" do %>
+    <%= f.radio_button :h_f, false, checked: true %>
+    Femme
+    <% end %>
+
+    <%= f.input :nom %>
+    <%= f.input :prenom %>
+    <%= f.input :numéro_tel %>
+    <%= f.input :adress, label: "Adresse Postale" %>
+    <%= f.input :photo, label: "Une photo de vous", hint: "La photo est obligatoire et doit être au format jpeg, png.)"%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>

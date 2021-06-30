@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>H f:</strong>
+  <%= @mon_compte.h_f %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @mon_compte.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @mon_compte.prenom %>
+</p>
+
+<p>
+  <strong>Numéro tel:</strong>
+  <%= @mon_compte.numéro_tel %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @mon_compte.adress %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @mon_compte.photo %>
+</p>
+
+<%= link_to 'Edit', edit_mon_compte_path(@mon_compte) %> |
+<%= link_to 'Back', mon_comptes_path %>

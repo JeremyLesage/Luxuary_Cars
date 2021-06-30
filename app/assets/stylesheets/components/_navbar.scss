@@ -2,10 +2,22 @@
   img { height: 60px; }
 }
 
+.navbar-nav{
+  padding-left: 100px;
+}
+
 .nav-link{
+  color: white;
   font-size: 20px;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 50px;
+  font-family: 'Roboto', sans-serif;
+  a{
+    color: white;
+    font-size: 20px;
+  text-align: center;
+  margin-right: 50px;
+  }
 }
 
 .drop-center{
@@ -14,4 +26,9 @@
 
 .logo-dropdown{
   height: 20px;
+}
+.buttondark {
+
+    background: transparent;
+    border: none;
 }

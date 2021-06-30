@@ -13,47 +13,47 @@
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Journée Expérience</h4>
+            <h4 style="color: orange;" class="my-0 font-weight-normal">Journée Expérience</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">5000€ <small class="text-muted">Le pack</small></h1>
+            <h1 class="card-title pricing-card-title"><span style="color: orange;">5000€</span> <span style="color black"> Le pack</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Test sur un circuit inclut</li>
               <li>Choissisez entre 3 modèles</li>
               <li>Assurance Comprise</li>
               <li>Équipement fourni</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Réservez une journée Expérience</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary btnloc">Réservez une journée Expérience</button>
           </div>
         </div>
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Mini Location</h4>
+            <h4 style="color: orange;">Mini Location</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">300€ <small class="text-muted">/ Km</small></h1>
+            <h1 class="card-title pricing-card-title"><span style="color: orange;">300€</span> <span style="color black"> / Km</span></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Choix parmis plusieurs modèles</li>
               <li>Assurance comprise</li>
               <li>Un conseillé à votre écoute 24/24</li>
               <li>Plage de location personnalisée</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Appeler nous pour convenir d'une durée de location</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary btnloc">Appeler nous pour convenir d'une durée de location</button>
           </div>
         </div>
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Location longue durée</h4>
+     <h4 style="color: orange;">Location longue durée</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">600€ <small class="text-muted">/ Km</small></h1>
+            <h1 class="card-title pricing-card-title"><span style="color: orange;">600€</span> <span style="color black">/ Km</span></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Choix parmis plusieurs modèles</li>
               <li>Assurance comprise</li>
               <li>Un conseillé à votre écoute 24/24</li>
               <li>Plage de location personnalisée</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Réservez une voitures pour une longue durée</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary btnloc">Réservez une voitures pour une longue durée</button>
           </div>
         </div>
       </div>
@@ -66,8 +66,10 @@
 
               <% @locations_achats.each do |locations_achat| %>
 
+                    <% if locations_achat.achat_location == true %>
+
               <div class="card" style="width: 18rem;">
-                <%= cl_image_tag locations_achat.photo, :width => 285, :crop => "pad" %>
+                <%= cl_image_tag locations_achat.photo, :width => 282, :crop => "pad" %>
                 <div class="card-body">
 
                   <p><strong>Modèle voiture: </strong><%= locations_achat.nom_voiture%></p>
@@ -80,8 +82,8 @@
 
                   <p><strong>Prix du véhicule: </strong><%= locations_achat.prix%></p>
                 </div>
-                <hr>
               </div>
+              <% end %>
               <% end %>
             </ul>
           </div>

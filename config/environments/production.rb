@@ -14,7 +14,7 @@ config.serve_static_assets = false
 config.assets.compress = true
 
 # Don't fallback to assets pipeline if a precompiled asset is missed
-config.assets.compile = false
+config.assets.compile = true
 
 # Generate digests for assets URLs
 config.assets.digest = true
@@ -26,7 +26,7 @@ config.assets.digest = true
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
@@ -41,7 +41,7 @@ config.assets.digest = true
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'

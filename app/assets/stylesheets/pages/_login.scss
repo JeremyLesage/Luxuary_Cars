@@ -1,5 +1,21 @@
-.text-login{
-  color: white !important ;
+.text-login {
+    border: solid;
+    border-color: orange;
+    background: #2f4f4f;
+    color: orange;
+    text-align: center;
+
+    h3{
+      color: orange;
+      text-decoration: underline orange;
+    }
+
+    a{
+      color: orange;
+      text-align: center;
+      text-decoration:none;
+      background: #2f4f4f
+    }
 }
 
 .form-label {
@@ -8,4 +24,22 @@
 
 .link{
   text-decoration: none;
+}
+
+.container1{
+    background: white;
+    border: solid;
+    border-color: #2f4F4f;
+}
+
+.btn2{
+  background: #2f4f4f;
+  color: orange;
+  border: solid;
+  text-decoration: none;
+  text-align: center;
+
+  input.btn{
+    color: orange;
+  }
 }

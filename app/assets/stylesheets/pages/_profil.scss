@@ -1,0 +1,27 @@
+.profil{
+
+  border: solid;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p{
+    text-align: center;
+  }
+
+  img{
+    width: 100px;
+    margin-top: 20px;
+  }
+}
+
+.bloc_menu{
+  background: orange;
+  width: 50%;
+}
+
+.dropdownprofil{
+  margin-top: 20px;
+
+}

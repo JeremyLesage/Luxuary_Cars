@@ -19,20 +19,20 @@
           <% @locations_achats.each do |locations_achat| %>
 
             <div class="card" style="width: 18rem;">
-              <%= cl_image_tag locations_achat.photo, :width => 285, :crop => "pad" %>
+              <%= cl_image_tag locations_achat.photo, :width => 282, :crop => "pad" %>
               <div class="card-body">
 
-                <p><strong>Modèle voiture: </strong><%= locations_achat.nom_voiture%></p>
+                <p><strong>Modèle voiture: </strong><%= locations_achat.nom_voiture %></p>
 
-                <p><strong>Vitesse Maximum: </strong><%= locations_achat.vitesse_max%></p>
+                <p><strong>Vitesse Maximum: </strong><%= locations_achat.vitesse_max %></p>
 
-                <p><strong>Acceleration: </strong><%= locations_achat.acceleration%></p>
+                <p><strong>Acceleration: </strong><%= locations_achat.acceleration %></p>
 
-                <p><strong>Puissance du véhicule: </strong><%= locations_achat.puissance%></p>
+                <p><strong>Puissance du véhicule: </strong><%= locations_achat.puissance %></p>
 
-                <p><strong>Prix du véhicule: </strong><%= locations_achat.prix%></p>
+                <p><strong>Prix du véhicule: </strong><%= locations_achat.prix %></p>
               </div>
-              <hr>
+              <hr style="background: orange;">
               <div class="notification-actions text-center">
                 <%= link_to edit_locations_achat_path(locations_achat) do %>
                 Editer <i class="fas fa-pencil-alt"></i>

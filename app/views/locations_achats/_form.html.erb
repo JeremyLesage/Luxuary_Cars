@@ -9,12 +9,24 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
+
+    <%= f.label :achat_location, class:"btn active" do %>
+    <%= f.radio_button :achat_location, true %>
+    Voiture pour Achat
+    <% end %>
+
+    <%= f.label :achat_location, class:"btn active" do %>
+    <%= f.radio_button :achat_location, false, checked: true %>
+    Voiture pour l'Ocassion
+    <% end %>
+
     <%= f.input :nom_voiture %>
     <%= f.input :vitesse_max %>
     <%= f.input :acceleration %>
     <%= f.input :puissance %>
     <%= f.input :prix %>
     <%= f.input :photo, label: "Une photo de la voiture", hint: "La photo est obligatoire et doit être au format jpeg, png, gif ou bmp :)"%>
+
   </div>
 
   <div class="form-actions">

@@ -6,6 +6,7 @@ class LocationsAchatsController < ApplicationController
     @locations_achats = LocationsAchat.all
   end
 
+
   # GET /locations_achats/1 or /locations_achats/1.json
   def show
     @locations_achats = LocationsAchat.all
@@ -65,6 +66,6 @@ class LocationsAchatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def locations_achat_params
-      params.require(:locations_achat).permit(:nom_voiture, :vitesse_max, :acceleration, :puissance, :prix, :photo)
+      params.require(:locations_achat).permit(:achat_location, :nom_voiture, :vitesse_max, :acceleration, :puissance, :prix, :photo)
     end
 end

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm text-center">
+      <br><br>
+
+          <% @mon_comptes.each do |mon_compte| %>
+
+          <div class="profil">
+
+            <div class="dropdownprofil">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Autres
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Mes commandes</a>
+    <a class="dropdown-item" href="#">Mes Assurances</a>
+    <a class="dropdown-item" href="#">Mes infos de paiement</a>
+  </div>
+</div>
+
+            <div style="width: 18rem; text-center">
+              <%= cl_image_tag mon_compte.photo, :width => 282, :crop => "pad" %>
+
+                <p><strong>Nom:  </strong><%= mon_compte.nom %></p>
+
+                <p><strong>Prénom: </strong><%= mon_compte.prenom %></p>
+
+                <p><strong>Téléphone </strong><%= mon_compte.numéro_tel %></p>
+
+                <p><strong>Adresse: </strong><%= mon_compte.adress %></p>
+
+              </div>
+              <hr style="background: orange;">
+              <div class="notification-actions text-center">
+                <%= link_to edit_mon_compte_path(mon_compte) do %>
+                Editer <i class="fas fa-pencil-alt"></i>
+                <% end %>
+                <%= link_to mon_compte_path(mon_compte), method: :delete, data: {confirm: 'Êtes vous sûrs de vouloir supprimer ?' } do %>
+                Supprimer <i class="far fa-trash-alt"></i>
+                <% end %>
+              </div>
+          <% end %>
+        </div>
+        <br> <br>
+    </div>
+  </div>
+</div>

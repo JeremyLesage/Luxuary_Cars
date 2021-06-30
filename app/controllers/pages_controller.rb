@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :qui_sommes_nous]
 
   def home
   end
@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   end
 
   def acheter_une_voiture
+    @locations_achats = LocationsAchat.all
+    @line_items = LineItem.all
+    @products = Product.all
   end
 
   def louer_une_voiture
@@ -15,6 +18,7 @@ class PagesController < ApplicationController
   end
 
   def vendre_une_voiture
+    @locations_achats = LocationsAchat.all
   end
 
   def ferrari
@@ -27,6 +31,9 @@ class PagesController < ApplicationController
   end
 
   def gestion_voiture
+  end
+
+  def mon_compte
   end
 
 end

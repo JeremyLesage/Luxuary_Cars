@@ -9,6 +9,8 @@
     position: fixed;
     bottom: 0pt;
     left: 0pt;
+    background-color: #2f4f4f; !important
+    color: white;
 }
 
 .footer_contents {
@@ -16,5 +18,8 @@
     height:24px; // Replace with the height your footer should be
     width: 1000px; // Visible width of footer
     margin:auto;
+    background-color: #2f4f4f; !important
+    color: white;
+    font-family: 'Roboto', sans-serif; !important
 
 }

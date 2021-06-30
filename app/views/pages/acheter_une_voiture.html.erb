@@ -1,0 +1,40 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/luxuary-cars/image/upload/v1624279321/pexels-david-mcbee-395537_wanwwj.jpg);">
+  <div class="container">
+    <h1>Luxuary_Cars !</h1>
+    <p>Louez à prix d'or la voiture de vos rêves !</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <br>
+      <ul class="grid2">
+
+        <% @locations_achats.each do |locations_achat| %>
+
+        <% if locations_achat.achat_location == false  %>
+
+        <div class="card" style="width: 18rem;">
+          <%= cl_image_tag locations_achat.photo, :width => 282, :crop => "pad" %>
+          <div class="card-body">
+
+            <p><strong>Modèle voiture: </strong><%= locations_achat.nom_voiture%></p>
+
+            <p><strong>Vitesse Maximum: </strong><%= locations_achat.vitesse_max%></p>
+
+            <p><strong>Acceleration: </strong><%= locations_achat.acceleration%></p>
+
+            <p><strong>Puissance du véhicule: </strong><%= locations_achat.puissance%></p>
+
+            <p><strong>Prix du véhicule: </strong><%= locations_achat.prix%></p>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
