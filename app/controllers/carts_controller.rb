@@ -51,9 +51,7 @@ class CartsController < ApplicationController
   # DELETE /carts/1 or /carts/1.json
   def destroy
 
-return unless @cart.id == session[:cart_id]
-
-    @cart.destroy
+@cart.destroy
 session.delete(:cart_id)
 
 respond_to do |format|
