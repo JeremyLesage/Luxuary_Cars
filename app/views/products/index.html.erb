@@ -1,14 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1 style="text-align: center;">Véhicule</h1>
 
-<table class="table table-strieped">
+<table class="table table-strieped table-dark">
   <thead>
     <tr>
-      <th>Title</th>
+      <th> Achat ou Location </th>
+      <th>Modèle du véhicule</th>
+      <th>Prix Véhicule</th>
+      <th>Puissance de la voiture</th>
+      <th>Vitesse Max de la voiture</th>
+      <th>0 à 100 Km</th>
       <th>Description</th>
-      <th>Price</th>
-      <th>Image url</th>
+      <th>Photo du véhicule</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +23,14 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><%= product.loc_achat %></td>
         <td><%= product.title %></td>
-        <td><%= product.description %></td>
         <td><%= number_to_currency product.price, unit: "€", separator: ",", format: "%n%u" %></td>
-        <td><%= image_tag product.image_url, width: "100" %></td>
+        <td><%= product.puissance %> Cv</td>
+        <td><%= product.vitesse_max %> Km/h</td>
+        <td><%= product.Acceleration %> s</td>
+        <td><%= product.description %></td>
+        <td><%= cl_image_tag product.photo_voiture, width: "100" %></td>
         <td><%= link_to 'Show', product, class: "btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-secondary"  %></td>
         <td><%= link_to 'Destroy', product, class: "btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,7 +38,9 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
+</div>
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Nouveau produit', new_product_path %>

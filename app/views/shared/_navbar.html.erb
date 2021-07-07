@@ -14,12 +14,14 @@
       <li>
         <a style="color: white;", class="nav-link" href="acheter_une_voiture">Acheter une voiture</a>
       </li>
-      <li>
+
+      <!-- <li>
         <a style="color: white;", class="nav-link" href="louer_une_voiture">Louer une voiture</a>
       </li>
        <li>
         <a style="color: white;", class="nav-link" href="vendre_une_voiture">Vendre une voiture</a>
-      </li>
+      </li>-->
+
       <li class="nav-item dropdown">
         <a style="color: white;", class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Nos Modèles
@@ -36,11 +38,11 @@
         </div>
       </li>
        <% if user_signed_in? && current_user.role === 'admin' %>
-      <li>
+      <!-- <li>
         <a style="color: red" class="nav-link" href="locations_achats">Gestion des Voitures</a>
-      </li>
+      </li> -->
       <li>
-        <a style="color: red" class="nav-link" href="catalog">Catalogue</a>
+        <a style="color: red" class="nav-link" href="products">Catalogue</a>
       </li>
       <% end %>
     </ul>

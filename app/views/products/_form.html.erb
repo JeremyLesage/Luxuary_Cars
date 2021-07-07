@@ -1,16 +1,36 @@
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 <%= simple_form_for(@product) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description, cols: 60, rows: 10 %>
-    <%= f.input :price %>
-    <%= f.input :image_url %>
+
+<%= f.label :loc_achat, class:"btn active" do %>
+    <%= f.radio_button :loc_achat, true %>
+    Voiture pour Achat
+    <% end %>
+
+    <%= f.label :loc_achat, class:"btn active" do %>
+    <%= f.radio_button :loc_achat, false, checked: true %>
+    Voiture pour l'Ocassion
+    <% end %>
+
+    <%= f.input :title, label: "Modèle de la voiture" %>
+    <%= f.input :price, label: "Prix de la voiture" %>
+    <%= f.input :puissance, label: "Puissance Max en chevaux" %>
+    <%= f.input :vitesse_max, label: "Vitesse Max en kilometre" %>
+    <%= f.input :Acceleration, label: "Accélération en seconde" %>
+    <%= f.input :description, cols: 60, rows: 10, label: "Détail sur la voiture" %>
+    <%= f.input :photo_voiture, label: "Une photo de la voiture", hint: "La photo est obligatoire et doit être au format jpeg, png, gif ou bmp :)"%>
+    <hr>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+</div>
+</div>
+</div>

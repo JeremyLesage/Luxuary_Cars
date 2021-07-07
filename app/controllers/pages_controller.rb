@@ -9,12 +9,12 @@ class PagesController < ApplicationController
 
   def acheter_une_voiture
     @locations_achats = LocationsAchat.all
-    @line_items = LineItem.all
     @products = Product.all
   end
 
   def louer_une_voiture
     @locations_achats = LocationsAchat.all
+    @products = Product.all
   end
 
   def vendre_une_voiture

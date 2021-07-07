@@ -1,10 +1,10 @@
 class Product < ApplicationRecord
+  mount_uploader :photo_voiture, PhotoUploader
   has_many :line_items, dependent: :nullify
 
-validates :title, :description, :image_url, presence: true
+validates :title, :description, :photo_voiture, :vitesse_max, :puissance, :Acceleration, presence: true
 validates :price, numericality: { greather_than_or_equal_to: 1}
-validates :title, uniqueness: {case_sensitive: false}
-validates :image_url,
+validates :photo_voiture,
 format: {
   with: /\.(jpg|png|gif)\z/i,
   message: "doit être au format JPG, PNG ou GIF"

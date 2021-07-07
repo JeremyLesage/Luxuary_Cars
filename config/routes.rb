@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   resources :items
   resources :locations_achats
   namespace :locations do
-    resources :achats
+  resources :achats
+  resource :contacts, only: [:new, :create] do
+      get "/thanks" => "contacts#thanks"
+    end
   end
+
   devise_for :users
   root to: 'pages#home'
   get '/qui_sommes_nous', to: 'pages#qui_sommes_nous'

@@ -1,24 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+<div class="row">
+<div class="col-sm">
 
+<p id="notice"><%= notice %></p>
 <p>
-  <strong>Title:</strong>
+  <strong>Achat ou L'ocation:</strong>
+  <%= @product.loc_achat %>
+</p>
+<p>
+  <strong>Modèle de la voiture:</strong>
   <%= @product.title %>
 </p>
-
 <p>
-  <strong>Description:</strong>
+  <strong>Prix de la voiture:</strong>
+  <%= @product.price %><span>€</span>
+</p>
+<p>
+  <strong>Puissance de la voiture:</strong>
+  <%= @product.puissance %><span>Cv</span>
+</p>
+<p>
+  <strong>Vitesse max de la voiture:</strong>
+  <%= @product.vitesse_max %><span>Km/h</span>
+</p>
+<p>
+  <strong>0 à 100:</strong>
+  <%= @product.Acceleration %><span>s</span>
+</p>
+<p>
+  <strong>Description de la voiture:</strong>
   <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+</div>
+</div>
+</div>

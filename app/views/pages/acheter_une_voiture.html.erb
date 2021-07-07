@@ -1,40 +1,86 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/luxuary-cars/image/upload/v1624279321/pexels-david-mcbee-395537_wanwwj.jpg);">
   <div class="container">
     <h1>Luxuary_Cars !</h1>
-    <p>Louez à prix d'or la voiture de vos rêves !</p>
+    <p></p>
   </div>
 </div>
-<div class="container">
+
+
+<<!-- div class="container">
   <div class="row">
     <div class="col-sm">
-      <br>
-      <ul class="grid2">
+<p id="notice"><%= notice %></p>
 
-        <% @locations_achats.each do |locations_achat| %>
+<h1 style="text-align: center;">Véhicule</h1>
 
-        <% if locations_achat.achat_location == false  %>
+<table class="table table-strieped table-dark">
+  <thead>
+    <tr>
+      <th> Achat ou Location </th>
+      <th>Modèle du véhicule</th>
+      <th>Prix Véhicule</th>
+      <th>Puissance de la voiture</th>
+      <th>Vitesse Max de la voiture</th>
+      <th>0 à 100 Km</th>
+      <th>Description</th>
+      <th>Photo du véhicule</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-        <div class="card" style="width: 18rem;">
-          <%= cl_image_tag locations_achat.photo, :width => 282, :crop => "pad" %>
-          <div class="card-body">
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.loc_achat %></td>
+        <td><%= product.title %></td>
+        <td><%= number_to_currency product.price, unit: "€", separator: ",", format: "%n%u" %></td>
+        <td><%= product.puissance %> Cv</td>
+        <td><%= product.vitesse_max %> Km/h</td>
+        <td><%= product.Acceleration %> s</td>
+        <td><%= product.description %></td>
+        <td><%= cl_image_tag product.photo_voiture, width: "100" %></td>
+        <td><%= button_to "Ajouter au panier", line_items_path(product_id: product), class: "btn btn-primary" %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<br> -->
 
-            <p><strong>Modèle voiture: </strong><%= locations_achat.nom_voiture%></p>
+<div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <br>
+            <ul class="grid2">
 
-            <p><strong>Vitesse Maximum: </strong><%= locations_achat.vitesse_max%></p>
+              <% @products.each do |product| %>
 
-            <p><strong>Acceleration: </strong><%= locations_achat.acceleration%></p>
+                    
 
-            <p><strong>Puissance du véhicule: </strong><%= locations_achat.puissance%></p>
+              <div class="card" style="width: 18rem;">
+                <%= cl_image_tag product.photo_voiture, :width => 282, :crop => "pad" %>
+                <div class="card-body">
 
-            <p><strong>Prix du véhicule: </strong><%= locations_achat.prix%></p>
+                  <p><strong>Modèle voiture: </strong><%= product.title %></p>
+                  <p><%= product.loc_achat %></p>
+                  <p><%= product.title %></p>
+                  <p><%= number_to_currency product.price, unit: "€", separator: ",", format: "%n%u" %></p>
+                  <p><%= product.puissance %> Cv</p>
+                  <p><%= product.vitesse_max %> Km/h</p>
+                  <p><%= product.Acceleration %> s</p>
+                  <p><%= product.description %></p>
+                  <p class= "text-center"><%= button_to "Ajouter au panier", line_items_path(product_id: product), class: "btn btn-primary" %></p>
+
+                
+                </div>
+              </div>
+              <% end %>
+            </ul>
           </div>
         </div>
-        <% end %>
-        <% end %>
-      </ul>
+      </div>
     </div>
   </div>
-</div>
-</div>
-</div>
 </div>
