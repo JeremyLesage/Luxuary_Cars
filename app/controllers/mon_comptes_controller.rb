@@ -3,7 +3,7 @@ class MonComptesController < ApplicationController
 
   # GET /mon_comptes or /mon_comptes.json
   def index
-    @mon_comptes = MonCompte.all
+    @user = current_user
   end
 
   # GET /mon_comptes/1 or /mon_comptes/1.json

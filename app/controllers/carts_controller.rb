@@ -55,7 +55,7 @@ class CartsController < ApplicationController
 session.delete(:cart_id)
 
 respond_to do |format|
-  format.html { redirect_to root_url, notice: "Votre panier est vide"}
+  format.html { redirect_to carts_path, notice: "Votre panier est vide"}
       format.json { head :no_content }
     end
   end

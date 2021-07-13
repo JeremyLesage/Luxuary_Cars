@@ -1,0 +1,35 @@
+<style>
+.banner-image {
+  background-image: url('https://images.pexels.com/photos/1591062/pexels-photo-1591062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+}
+</style>
+
+<div class="container">
+
+      <br>
+
+      <h1 class="text-center h1msg"> Messages Clients</h1>
+
+        <% @contacts.each do |contact| %>
+
+        <div class="msgclients">
+          <div class="form-row">
+    <div class="col-sm">
+
+      <br>
+
+        <p> <span class="categorie"> Nom, Prénom :  </span><%= contact.name %></p>
+        <p> <span class="categorie"> Adresse Email :  </span><%= contact.email %></p>
+        <p> <span class="categorie"> Message client :  </span><%= contact.content %></p>
+        <p><%= link_to 'Delete', message_path, class:"btn btn-danger" ,method: :delete, data: {confirm: "Are you sure"} %></p>
+    <br>
+      </div>
+    </div>
+      </div>
+    <% end %>
+
+    <br>
+
+</div>
+

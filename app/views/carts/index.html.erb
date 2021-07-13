@@ -1,25 +1,43 @@
-<p id="notice"><%= notice %></p>
+<style>
+      .banner-image {
+        background-image: url('https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-size: cover;
+      }
+    </style>
 
-<h1>Carts</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @carts.each do |cart| %>
-      <tr>
-        <td><%= link_to 'Show', cart %></td>
-        <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <h1 style="text-align:center">Mon Panier</h1>
 
-<br>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<%= link_to 'New Cart', new_cart_path %>
+        <% @carts.each do |cart| %>
+        <tr>
+          <div style="text-decoration:none;" class="text-center">
+            <p><%= link_to 'Voir votre panier', cart %></p>
+            <p><%= link_to 'Modifier votre panier', edit_cart_path(cart) %></p>
+            <p><%= link_to 'Supprimer votre panier', cart, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          </tr>
+          <% end %>
+        </table>
+
+        <br>
+
+        <div class="text-center">
+          <%= link_to 'New Cart', new_cart_path %>
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+  </div>

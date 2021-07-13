@@ -1,28 +1,3 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-}
-
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.color{
-  color: white;
-}
-
 .photo{
   height: 25vh;
   border-radius: 8px;
@@ -51,7 +26,10 @@
   grid-row-gap: 20px;
 }
 
-body {
+body, html {
+    margin: 0;
+    padding: 0px;
+    overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   background-color: white;
   color: black;
@@ -150,6 +128,7 @@ background: rgba(255,255,255,0);
 
 h1, h2, h3, h4 {
   color: white;
+  margin: 0px;
 }
 
 .btnloc{
@@ -187,52 +166,5 @@ h1, h2, h3, h4 {
   background-color: #2f4f4f;
   border-color: orange;
 }
-
-
-/* Défilement bannière */
-
-@font-face {
-  font-family: Edelsans;
-  src: url(https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-}
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;}
-.defimage {
-  height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 2vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-size: 4vw;
-}
-.defimage:first-of-type {
-  text-transform: uppercase;
-  font-size: 7vw;
-}
-.defimage:first-of-type, .defimage.pop {
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0,0,0,0.4);
-}
-.defimage:nth-of-type(even) {
-  background: #fff;
-}
-.defimage:nth-of-type(1) {
-  background-image: url(https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-}
-.defimage:nth-of-type(3) {
-  background-image: url(https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-}
-.defimage:nth-of-type(5) {
-  background-image: url(https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-}
-
-
 
 

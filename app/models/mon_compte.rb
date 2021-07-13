@@ -1,3 +1,3 @@
 class MonCompte < ApplicationRecord
-    mount_uploader :photo, PhotoUploader
+    mount_uploader :avatar, PhotoUploader
 end

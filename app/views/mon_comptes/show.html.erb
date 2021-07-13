@@ -1,34 +1,53 @@
+<style>
+.banner-image {
+  background-image: url('https://images.pexels.com/photos/6335/man-coffee-cup-pen.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+  background-size: cover;
+}
+</style>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>H f:</strong>
-  <%= @mon_compte.h_f %>
-</p>
+<div class="container">
+  <div class="form-row">
+    <div class="col-xs-2 mx-auto">
+      <div class="text-center compteedit">
 
-<p>
-  <strong>Nom:</strong>
-  <%= @mon_compte.nom %>
-</p>
+        <p>
+          <strong class="soul">Homme/Femme:</strong>
+          <%= @mon_compte.h_f %>
+        </p>
 
-<p>
-  <strong>Prenom:</strong>
-  <%= @mon_compte.prenom %>
-</p>
+        <p>
+          <strong class="soul">Nom:</strong>
+          <%= @mon_compte.nom %>
+        </p>
 
-<p>
-  <strong>Numéro tel:</strong>
-  <%= @mon_compte.numéro_tel %>
-</p>
+        <p>
+          <strong class="soul">Prenom:</strong>
+          <%= @mon_compte.prenom %>
+        </p>
 
-<p>
-  <strong>Adress:</strong>
-  <%= @mon_compte.adress %>
-</p>
+        <p>
+          <strong class="soul">Numéro tel:</strong>
+          <%= @mon_compte.numéro_tel %>
+        </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @mon_compte.photo %>
-</p>
+        <p>
+          <strong class="soul">Adresse:</strong>
+          <%= @mon_compte.adress %>
+        </p>
 
-<%= link_to 'Edit', edit_mon_compte_path(@mon_compte) %> |
-<%= link_to 'Back', mon_comptes_path %>
+        <p>
+          <%= cl_image_tag @mon_compte.photo, width: "300px" %>
+        </p>
+
+        <%= link_to 'Modifier', edit_mon_compte_path(@mon_compte) %> |
+        <%= link_to 'Revenir au compte', mon_comptes_path %>
+
+        <br>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :qui_sommes_nous]
+  skip_before_action :authenticate_user!, only: [ :home, :qui_sommes_nous, :acheter_une_voiture]
 
   def home
   end
 
   def qui_sommes_nous
+    @contact = Contact.new
   end
 
   def acheter_une_voiture
@@ -17,23 +18,17 @@ class PagesController < ApplicationController
     @products = Product.all
   end
 
-  def vendre_une_voiture
-    @locations_achats = LocationsAchat.all
-  end
-
   def ferrari
-  end
-
-  def mon_panier
   end
 
   def lamborghini
   end
 
-  def gestion_voiture
+  def mon_compte
   end
 
-  def mon_compte
+  def message
+    @contacts = Contact.all
   end
 
 end

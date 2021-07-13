@@ -12,6 +12,9 @@ module LuxuaryCars
       generate.assets false
       generate.helper false
       generate.test_framework :test_unit, fixture: false
+      config.action_mailer.delivery_method = :sendmail
+      config.action_mailer.perform_deliveries = true
+      config.action_mailer.raise_delivery_errors = true
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1

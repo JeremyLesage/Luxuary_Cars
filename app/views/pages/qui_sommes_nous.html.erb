@@ -1,10 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1253049/pexels-photo-1253049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-  <div class="container">
-    <h1>Luxuary_Cars !</h1>
-    <p>Notre équipe à votre écoute, pour votre plus grand bonheur !</p>
-    <a class="btn btn-flat color" href="users/sign_in">Rejoingnez nous</a>
-  </div>
-</div>
+<style>
+      .banner-image {
+        background-image: url('https://images.pexels.com/photos/1253049/pexels-photo-1253049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-size: cover;
+      }
+    </style>
 
 <br>
 
@@ -13,7 +12,7 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-          <h1 class="text-center">Notre équipe</h1>
+          <h1 style="text-decoration: underline" class="text-center">Notre équipe</h1>
         </div>
 
         <br>
@@ -80,8 +79,6 @@
     <section id="contact" class="contact section-bg">
       <div class="container">
 
-        <br>
-
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
           <h1 class="text-center">Contact</h1>
           <p class="text-center pblanc">Pour toute questions ou demande de devis. Merci de nous contacter aux coordonnées ci dessous ! 🏎</p>
@@ -124,35 +121,18 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <%= form_with(model: @contacts, local: true, url:contacts_path) do |f| %>
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Monique" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Moniquedu49@gmail.com" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
+                  <%= f.label :name, "Nom" %>
+                  <%= f.text_field :name %>
+                  <%= f.label :email, "adresse mail" %>
+                  <%= f.email_field :email, autocomplete: "email" %>
+                <%= f.label :content, "Dites nous tout" %>
+                <%= f.text_field :content %>
 
-        </div>
+              <div class="text-center"><%= f.submit "Envoyer !" %></div>
 
-      </div>
+          <% end %>
+
     </section><!-- End Contact Section -->
